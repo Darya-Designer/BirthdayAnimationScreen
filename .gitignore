@@ -37,3 +37,4 @@ Thumbs.db
 .vite/
 .turbo/
 *.tsbuildinfo
+.vercel
