@@ -3349,6 +3349,8 @@ export default function App() {
     setNoThanksClicked(false);
   };
 
+  const anySceneActive = showLaunch || showTravel || showMoon || showWarmup || showFinal;
+
   return (
     <div className="size-full relative overflow-hidden flex items-center justify-center"
       style={{ background: "#000000", minHeight: "100vh" }}
@@ -3360,7 +3362,7 @@ export default function App() {
       {/* Content */}
       <motion.div
         className="flex flex-col items-center"
-        style={{ position: "relative", zIndex: 10 }}
+        style={{ position: "relative", zIndex: 10, display: anySceneActive ? "none" : undefined }}
         initial={{ opacity: 0, scale: 0.88, y: 40 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
